@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Demo from './components/withRedux/Demo';
+import { MultipleCounterRedux } from './components/withRedux/MultipleCounterRedux';
+import SingleCounterRedux from './components/withRedux/SingleCounterRedux';
+import SingleCounter from './components/withoutRedux/SingleCounter';
+import MultipleCounter from './components/withoutRedux/MultipleCounter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display: 'flex', justifyContent:'center'}}>
+      <h3>1. Single Counter Without Redux</h3>
+      <SingleCounter />
+      <h3>2. Multiple Counter Without Redux</h3>
+      <MultipleCounter />
+      <h3>3. Single Counter With Redux</h3>
+      <SingleCounterRedux />
+      <h3>4. Multiple Counter With Redux</h3>
+      <MultipleCounterRedux/>
     </div>
   );
 }
-
 export default App;
